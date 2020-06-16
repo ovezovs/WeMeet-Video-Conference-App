@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config()   // load in env variables
 const MongoClient =  require('mongodb').MongoClient;
 const mongo = new MongoClient(process.env.DB_URL, { useUnifiedTopology: true })
 const OpenTok = require('opentok')
@@ -18,7 +18,7 @@ exports.handler = async(event, context) => {
             }
         }
         
-        const { name } = JSON.parse(event.body)   // Get the request body
+        const { name } = JSON.parse(event.body)   // Get the name from the request body
         await mongo.connect()       // establish connection to MongoDB database
         const sessions = await mongo.db('serverless_video_app').collection('sessions')   // store sessions in sessions collection
         
@@ -43,6 +43,7 @@ exports.handler = async(event, context) => {
         // generate a token with the publisher role
         const token = OT.generateToken(session.sessionId, {role: 'publisher'})  // generate new every time, tokens have short lifetime
         
+        // return the apiKey, sessionId, and token
         return {
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -71,7 +72,7 @@ exports.handler = async(event, context) => {
 
 }
 
-// Use asynchronous function to see 
+// Use asynchronous function to create a new session
 const createSession = () => {
     return new Promise((resolve, reject) => {
         try {

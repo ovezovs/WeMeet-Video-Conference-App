@@ -1,1 +1,1 @@
-# WeMeet Video Conferencing App
+# WeMeet - Video Conferencing App

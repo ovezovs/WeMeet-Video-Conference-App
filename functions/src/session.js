@@ -12,7 +12,7 @@ exports.handler = async(event, context) => {
                 headers: {
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Headers': 'Content-Type',
-                    'Allow': POST
+                    'Allow': 'POST'
                 },
                 statusCode: 204  // means no content
             }

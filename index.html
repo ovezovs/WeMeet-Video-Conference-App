@@ -1,10 +1,34 @@
 <html>
-    <head></head>
+    <head>
+        <title>WeMeet Video Conferences</title>
+        <meta charset="utf-8">
+        <link rel="icon" href="assets/images/video.png" type="image/png">
+        <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    </head>
+
     <body>
-        <form id="registration">
-            <input type="text" name="name" required placeholder="Please enter a room name">
-            <button>Enter</button>
-        </form>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/video.png" alt="WeMeet Logo" width="60" height="60">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><h2>WeMeet Video Conferences</h2></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="video-windows">
+            <form id="registration">
+                <input type="text" name="name" required placeholder="Please enter a meeting ID">
+                <button>Enter</button>
+            </form>
+        </div>
+
         <div id="call">
             <div id="subscribers"></div>
             <div id="publishers"></div>

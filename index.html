@@ -9,7 +9,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     </head>
 
-    <body>
+    <body class="body">
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -28,16 +28,16 @@
                 <b>Join a meeting:</b> Enter a provided meeting ID
             </p>
             <form id="registration">
-                <input type="text" name="name" required placeholder="Please enter a meeting ID">
+                <input type="text" id="meeting-id" name="name" required placeholder="Enter a meeting ID">
                 <button>Enter</button>
             </form>
-        </div>
+        
 
         <div id="call">
             <div id="subscribers"></div>
             <div id="publishers"></div>
         </div>
-
+        </div>
 
 
         <!-- Scripts - must be imported at the end-->

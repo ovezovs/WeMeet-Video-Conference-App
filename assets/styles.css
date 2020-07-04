@@ -1,3 +1,8 @@
+.body {
+    background-color: rgb(207, 205, 205);
+    height: 100%;
+}
+
 .navbar {
     background-color: rgb(136, 241, 153);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
